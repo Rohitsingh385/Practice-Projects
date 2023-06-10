@@ -1,5 +1,7 @@
 function handleEditProfile(){
 
+    new Datepicker('#Birthday');
+
     var updateName = document.getElementById("input-name")
     var value1 = document.getElementById("name").textContent
     updateName.value = value1
@@ -17,7 +19,6 @@ function handleEditProfile(){
 }
 
 function handleUpdateProfile(){
-
     var updateName = document.getElementById("input-name").value
     var value1 = document.getElementById("name")
     value1.textContent = updateName
@@ -36,4 +37,5 @@ function handleUpdateProfile(){
     
     document.getElementById("update-container").style.display = "none"
     document.getElementById("main-container").style.display = "block"
+    
 }

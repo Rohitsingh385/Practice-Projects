@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="node_modules/Datepicker.js/dist/css/datepicker.material.css"/>
+    <script type="text/javaScript" src="app.js"></script>
+    <script src="node_modules/validator/validator.min.js"></script>
+    <script src="node_modules/Datepicker.js/dist/datepicker.js"></script>
+
 </head>
 <body>
 
@@ -32,10 +37,9 @@
         <hr/>
         <span>Interest: </span><input id="input-interest" placeholder="web dev"/>
         <hr/>
+        <span>Birthday: </span><input type="text" id="Birthday">
+        <hr/>
         <button onclick="handleUpdateProfile()">Update profile</button>
     </div>
-    
-    <script type="text/javaScript" src="app.js"></script>
-    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </body>
 </html>
