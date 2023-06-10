@@ -24,7 +24,11 @@ function handleUpdateProfile(){
 
     var updateEmail = document.getElementById("input-email").value
     var value2 = document.getElementById("email")
-    value2.textContent = updateEmail
+    if(validator.isEmail(updateEmail)){
+        value2.textContent = updateEmail
+    }else{
+        alert("wrong email format")
+    }
 
     var updateInterest = document.getElementById("input-interest").value
     var value3 = document.getElementById("interest")
