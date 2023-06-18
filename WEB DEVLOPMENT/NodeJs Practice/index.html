@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+
+    <script>
+
+        function addtask(){
+
+            ulEl = document.getElementById("elements")
+            inputEl = document.getElementById("input")
+
+            liEl = document.createElement("li")
+
+            liEl.textContent = inputEl.value
+
+            ulEl.append(liEl)
+
+
+        }
+
+        payload:{
+            task: inputEl.value
+        }
+
+        await fetch("save-task",{
+            method: "POST",
+            body:JSON.stringify(payload),
+            header: {
+                'Accept': "application/json",
+                'Content-Type': "application/json"
+            }
+        })
+
+        jsonRes = await res.json()
+        console.log(jsonRes)
+
+    </script>
+</head>
+<body>
+
+    <input id="input" type="text" placeholder="enter some tasks">
+    <button onclick="addtask()" id="btn" >Add Task</button>
+
+    <ul id="elements">
+
+    <!-- 1) grab the elements by there id and store them in variable lets's say 1 and 2
+         
+         2) created a li element with js and store it in variable lets say 3 
+
+         3) assign the variable 1 value to variable 3
+         
+         4) append the li element to ul 2.append 3
+
+
+        
+        
+        
+        
+        
+        -->
+
+    </ul>
+    
+</body>
+</html>
